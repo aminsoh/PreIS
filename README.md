@@ -1,27 +1,70 @@
-
 # PreIS: A Novel Data Augmentation Approach Using Protein Language Models for Influenza A Subtype Prediction
 
-## Description
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)]()
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.9%2B-EE4C2C)]()
+[![Transformers](https://img.shields.io/badge/Transformers-4.0%2B-yellow)]()
 
-Protein sequences have complex structures and are subject to strict rules regarding their composition and function; therefore, it is difficult to generate new examples of protein sequences without violating these rules or introducing errors that could affect the accuracy of the model. To overcome this problem, it is important to develop approaches for data augmentation that are tailored specifically to the characteristics and constraints of protein sequences. In this paper, we propose a novel approach for producing synthetic samples of protein sequences that leverages supervision to preserve data distribution and improve the generalization capabilities of the model. Our approach involves the use of labeled data to guide the generation of augmented samples, ensuring that the resulting synthetic data is more representative of the distribution of the actual data. 
+## Overview
 
-![SDA](https://github.com/mohaminn/sda/blob/main/Images/fig_sda.jpeg)
+Protein sequences have complex structures and are subject to strict rules regarding their composition and function. Generating new protein sequences without violating these rules is challenging. **PreIS** (Protein Improvement Strategy) is a novel data augmentation approach tailored specifically to the characteristics and constraints of protein sequences. 
 
-The implemented MC-NN model is available [here](https://github.com/CBRC-lab/PreIS/tree/main/MC_NN).
+Our approach leverages supervised guidance to preserve the underlying data distribution, significantly improving the generalization capabilities of machine learning models for virus subtype prediction.
 
-## Installation
+![SDA Architecture](Images/fig_sda.jpeg)
 
-This project is available via huggingface/transformers:
+---
+
+## Key Features
+
+- **Supervised Data Augmentation**: Uses labeled data to guide the generation of synthetic protein sequences.
+- **PLM Integration**: Leverages state-of-the-art Protein Language Models (RITA) for sequence representation.
+- **MC-NN Architecture**: Implementation of a Multi-Component Neural Network for robust classification.
+- **Influenza A Focus**: Optimized for viral subtype prediction accuracy.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Python 3.8+ installed. It is recommended to use a virtual environment.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/aminsoh/PreIS.git
+   cd PreIS
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install torch pandas numpy transformers
+   ```
+
+3. **Verify RITA Model Weights:**
+   Ensure the RITA model binaries are present in the `RITA/` directory as specified in the configuration.
+
+### Usage
+
+To start training the model with the default configuration:
 
 ```bash
-pip install torch
-pip install transformers
-```
-    
-## Usage
-
-```bash
-cd PreIS
-python3 train.py
+python train.py
 ```
 
+For the Multi-Component Neural Network (MC-NN) implementation, refer to the [MC_NN subdirectory](MC_NN/).
+
+---
+
+## Citation
+
+If you find this work useful in your research, please cite:
+
+```bibtex
+@article{preis2023,
+  title={PreIS: A Novel Data Augmentation Approach Using Protein Language Models for Influenza A Subtype Prediction},
+  author={Sohrabi, Muhammad Amin and others},
+  year={2023}
+}
+```
