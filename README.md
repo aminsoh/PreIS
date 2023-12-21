@@ -62,9 +62,14 @@ For the Multi-Component Neural Network (MC-NN) implementation, refer to the [MC_
 If you find this work useful in your research, please cite:
 
 ```bibtex
-@article{preis2023,
-  title={PreIS: A Novel Data Augmentation Approach Using Protein Language Models for Influenza A Subtype Prediction},
-  author={Sohrabi, Muhammad Amin and others},
-  year={2023}
+@article{Sohrabi2024,
+  title={A novel data augmentation approach for influenza A subtype prediction based on HA proteins},
+  author={Sohrabi, Mohammad Amin and Zare-Mirakabad, Fatemeh and Ghidary, Saeed Shiry and Saadat, Mahsa and Sadegh-Zadeh, Seyed-Ali},
+  journal={Computers in Biology and Medicine},
+  volume={172},
+  pages={108316},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.compbiomed.2024.108316}
 }
 ```
